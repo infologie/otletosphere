@@ -1,0 +1,902 @@
+
+
+
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation du projet Otlotosphere">
+      
+      
+      
+        <meta name="author" content="Guillaume Brioudes <https://myllaume.fr>">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copier dans le presse-papier">
+      
+        <meta name="lang:clipboard.copied" content="Copié dans le presse-papier">
+      
+        <meta name="lang:search.language" content="fr">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Aucun document trouvé">
+      
+        <meta name="lang:search.result.one" content="1 document trouvé">
+      
+        <meta name="lang:search.result.other" content="# documents trouvés">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Schémas de données de l'Otletosphère</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extras/style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#refonte-donnees-otletosphere" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Documentation Otletosphère" aria-label="Documentation Otletosphère" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Documentation Otletosphère
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Schémas de données de l'Otletosphère
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Taper pour démarrer la recherche
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Documentation Otletosphère" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Documentation Otletosphère
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Démarche
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Démarche
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../choix%20technique/" title="Choix techniques" class="md-nav__link">
+      Choix techniques
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Guide utilisation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Guide utilisation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../elements%20interface/" title="Éléments d'interface" class="md-nav__link">
+      Éléments d'interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../navigation%20reseau/" title="Naviguer dans le réseau" class="md-nav__link">
+      Naviguer dans le réseau
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../selection%20entites/" title="Sélectionner une entité" class="md-nav__link">
+      Sélectionner une entité
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trier%20entites/" title="Trier les entités" class="md-nav__link">
+      Trier les entités
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../historique%20versions/" title="Historique" class="md-nav__link">
+      Historique
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Développement
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Développement
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bibliotheques/" title="Bibliothèques" class="md-nav__link">
+      Bibliothèques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Données
+      </label>
+    
+    <a href="./" title="Données" class="md-nav__link md-nav__link--active">
+      Données
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#refonte-donnees-otletosphere" class="md-nav__link">
+    Refonte données Otletosphère
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lexique" class="md-nav__link">
+    Lexique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modele-de-donnees" class="md-nav__link">
+    Modèle de données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historique-des-changements" class="md-nav__link">
+    Historique des changements
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../architecture%20code%20source/" title="Architecture" class="md-nav__link">
+      Architecture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#refonte-donnees-otletosphere" class="md-nav__link">
+    Refonte données Otletosphère
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lexique" class="md-nav__link">
+    Lexique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modele-de-donnees" class="md-nav__link">
+    Modèle de données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historique-des-changements" class="md-nav__link">
+    Historique des changements
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Données</h1>
+                
+                <h2 id="refonte-donnees-otletosphere">Refonte données Otletosphère<a class="headerlink" href="#refonte-donnees-otletosphere" title="Permanent link">&para;</a></h2>
+<p>L'objectif est d'optimiser (plus rapide, plus fiable) au maximum les entrées dans l'Otletosphère pour les administrateurs et de rassembler les circuits d'injection pour les développeurs. Les données sont actuellement réparties dans deux fichiers dont les <strong>modifications ne sont pas synchronisées</strong> automatiquement et à partir de <strong>champs libres</strong>. Cette marge de manœuvre peut laisser place à des bugs.</p>
+<p>Ce modèle sera intégré dans un unique tableur (un seul fichier <em>GSheet</em>). Les objets ont chacun leur feuille, <code>Entités</code> et <code>Liens</code>.</p>
+<p>D'autres feuilles jointes (<code>Pays</code>, <code>Relations</code> etc.) serviront de base de données comme pour les pays, relations et types. Ainsi, il sera possible à tout moment d'augmenter ces listes avec des nouvelles entrées augmentant ainsi les possiblités de saisie (controlées) sur le site. Ce sera aussi l'occasion pour chaque type et relation de décrire le contexte auquel ils sont liés sur leur feuilles respectives, cela afin de guider la saisie.</p>
+<h3 id="lexique">Lexique<a class="headerlink" href="#lexique" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>integer</code> : entiers naturels</li>
+<li><code>string</code> : chaine de caractère</li>
+<li><code>list</code> : chaine de caractère parmis un lexique limité</li>
+<li><code>boolean</code> : "VRAI" ou "FAUX"</li>
+<li>Les nom des tables, aussi appelées "objets" débutent pas une majuscule : <code>Entité</code></li>
+<li>Les nom des champs sont en minuscule : <code>id</code></li>
+</ul>
+<h2 id="modele-de-donnees">Modèle de données<a class="headerlink" href="#modele-de-donnees" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Objet</th>
+<th>Métadonnée</th>
+<th>Typage</th>
+<th>Lexique</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entité</td>
+<td>id</td>
+<td>integer</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>label</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>relation_otlet</td>
+<td>list</td>
+<td>collègue<br />contemporain<br />collaborateur<br />opposant</td>
+<td>Extraits de la feuille <code>Relations</code>, colonne <code>label</code></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>type</td>
+<td>list</td>
+<td>personne<br />institution<br />événement<br />œuvre</td>
+<td>Extraits de la feuille <code>Types</code>, colonne <code>label</code></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>nom</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>prenom</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>pays</td>
+<td>list</td>
+<td>liste des pays en français</td>
+<td>Extraits de la feuille <code>Pays</code>, colonne <code>label_fr</code></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>pays_en</td>
+<td>list</td>
+<td>liste des pays en anglais</td>
+<td>Extraits de la feuille <code>Pays</code>, colonne <code>label_en</code></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>discipline</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>discipline_en</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>description</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>description_en</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>image</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>titre</td>
+<td>string</td>
+<td>&lt; 70</td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>lien_wikipedia</td>
+<td>string</td>
+<td>URL</td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>date_naissance</td>
+<td>integer</td>
+<td>&lt; 2020</td>
+<td>Année</td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>date_mort</td>
+<td>integer</td>
+<td>&lt; 2020</td>
+<td>Année</td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>genre</td>
+<td>list</td>
+<td>homme<br />femme</td>
+<td></td>
+</tr>
+<tr>
+<td>Entité</td>
+<td>public</td>
+<td>boolean</td>
+<td></td>
+<td>Si publié sur le site ou non</td>
+</tr>
+<tr>
+<td>Lien</td>
+<td>from</td>
+<td>integer</td>
+<td><code>Entité.id</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Lien</td>
+<td>to</td>
+<td>integer</td>
+<td><code>Entité.id</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Lien</td>
+<td>label</td>
+<td>string</td>
+<td>&lt; 70</td>
+<td></td>
+</tr>
+<tr>
+<td>Lien</td>
+<td>preuve</td>
+<td>string</td>
+<td>URL</td>
+<td></td>
+</tr>
+<tr>
+<td>Relation</td>
+<td>label</td>
+<td>string</td>
+<td>&lt; 20</td>
+<td></td>
+</tr>
+<tr>
+<td>Relation</td>
+<td>couleur</td>
+<td>string</td>
+<td></td>
+<td>Indicatif : aucune incidence sur le site</td>
+</tr>
+<tr>
+<td>Relation</td>
+<td>description</td>
+<td>string</td>
+<td></td>
+<td>Indicatif : aucune incidence sur le site</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>label</td>
+<td>string</td>
+<td>&lt; 20</td>
+<td></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>description</td>
+<td>string</td>
+<td></td>
+<td>Indicatif : aucune incidence sur le site</td>
+</tr>
+<tr>
+<td>Pays</td>
+<td>label_fr</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Pays</td>
+<td>label_en</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Network</td>
+<td>from</td>
+<td>integer</td>
+<td><code>Entité.id</code></td>
+<td>Extraits de la feuille <code>Entité</code>, colonne <code>id</code></td>
+</tr>
+<tr>
+<td>Network</td>
+<td>to</td>
+<td>integer</td>
+<td><code>Entité.id</code></td>
+<td>Extraits de la feuille <code>Entité</code>, colonne <code>id</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="historique-des-changements">Historique des changements<a class="headerlink" href="#historique-des-changements" title="Permanent link">&para;</a></h2>
+<p>Voici une liste exhaustive des changements présentés sous forme de liste, puis après sous forme de tableau.</p>
+<p>Le tout sera unifié dans dans un unique tableur (un seul fichier <em>GSheet</em>).</p>
+<ul>
+<li>Table <code>Entités</code></li>
+<li>Colonnes supprimées :<ul>
+<li><code>shape</code> car automatisable tel que si <code>relation_otlet</code> == institution, alors <code>shape</code> = "carré", sinon <code>shape</code> = "rond"</li>
+<li><code>brokenImage</code> automatisable de la même manière que <code>shape</code></li>
+</ul>
+</li>
+<li>Colonne modifiées :<ul>
+<li><code>relation</code> renommée <code>titre</code></li>
+<li><code>gender</code> renommée <code>genre</code></li>
+<li><code>group</code> renommée <code>relation_otlet</code></li>
+<li><code>date_naissance</code> et <code>date_mort</code> sont exprimés en année</li>
+</ul>
+</li>
+<li>Colonnes ajoutées :<ul>
+<li><code>public</code> permettant de cacher un contenu qui n'est ainsi pas intégré au site : on peut alors le modifier sans craindre de casser l'interface</li>
+</ul>
+</li>
+<li>Table <code>Liens</code></li>
+<li>Colonnes modifiées<ul>
+<li><code>from</code> et <code>to</code> remplacent <code>from_name</code> et <code>to_name</code>. Aucune saisie d'<code>id</code> ne se fera manuellement, mais automatiquement, en fonction du <code>label</code> référencé dans l'un des deux champs. L'<code>id</code> sera saisi automatiquement sur la feuille <code>Network</code> et sera automatiquement ajoutées/échangées lorsqu'un label <code>label</code> se sera ajouté/échangé dans <code>from</code> ou <code>to</code>.</li>
+<li><code>Preuve de la relation</code> renommée <code>preuve</code> et ne pourrait prendre la forme que d'une URL (vers une site, une image) pour faciliter son intégration sur le site.</li>
+<li><code>titre</code> renommée <code>label</code></li>
+</ul>
+</li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../bibliotheques/" title="Bibliothèques" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Bibliothèques
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../architecture%20code%20source/" title="Architecture" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Architecture
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Creative Commons BY-SA
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.fr.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
