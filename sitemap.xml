@@ -1,51 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://myllaume.github.io/otletosphere/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/choix%20technique/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/elements%20interface/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/navigation%20reseau/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/selection%20entites/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/trier%20entites/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/faq/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/historique%20versions/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/bibliotheques/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/structure%20donnees/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/architecture%20code%20source/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://myllaume.github.io/otletosphere/installation/</loc>
-     <lastmod>2020-06-02</lastmod>
+     <lastmod>2020-06-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://myllaume.github.io/otletosphere/inscrire%20donnees/</loc>
+     <lastmod>2020-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
