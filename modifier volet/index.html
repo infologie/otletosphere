@@ -616,6 +616,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../modifier%20traduction/" title="Modifier traduction" class="md-nav__link">
+      Modifier traduction
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -724,8 +736,7 @@
                 <p>Ce tutoriel va décrire comment modifier le contenu du <a href="/elements interface/#volet-de-description">volet de description</a>, à savoir l'affichage des informations disponibles pour chaque <a href="/selection entites/#methodes">entité sélectionnée</a>.</p>
 <p>Les modifications suivantes s'effectuent dans le fichier <code>/dist/scripts/fiche.js</code> si vous <a href="/modifier code source/#utiliser-les-outils-de-developpement">utilisez les outils de développements</a>. Sinon vous devrez modifier le fichier <code>/assets/main.js</code>.</p>
 <h2 id="architecture-de-lobjet-fiche">Architecture de l'objet <em>Fiche</em><a class="headerlink" href="#architecture-de-lobjet-fiche" title="Permanent link">&para;</a></h2>
-<div class="mermaid">
-graph TD
+<div class="mermaid">graph TD
     1[switchNode]
     2((fiche))
     3[fill]
@@ -745,27 +756,26 @@ graph TD
 
     style 3 fill:#4051b5,color:#fff
 
-    1 --> 3
+    1 --&gt; 3
     2 -.- 3
-    4 --> 3
+    4 --&gt; 3
     5 -.- 6
     5 -.- 7
-    8 --> 1
-    6 --> 9
-    6 --> 10
-    9 --> 4
-    10 --> 4
+    8 --&gt; 1
+    6 --&gt; 9
+    6 --&gt; 10
+    9 --&gt; 4
+    10 --&gt; 4
     7 -.- 11
-    11 --> 12
-    12 --> 4
+    11 --&gt; 12
+    12 --&gt; 4
     7 -.- 13
-    13 --> 14
-    14 --> 8
+    13 --&gt; 14
+    14 --&gt; 8
     2 -.- 15
     2 -.- 16
-    3 --> 15
-    3 --> 16
-</div>
+    3 --&gt; 15
+    3 --&gt; 16</div>
 
 <p>Nous allons modifier la fonction <code>fill</code> de l'objet <code>fiche</code> (noté <code>fiche.fill</code>). Cette fonction possède deux entrées :</p>
 <ul>
@@ -788,12 +798,10 @@ graph TD
 
 <h4 id="forme-generique">Forme générique<a class="headerlink" href="#forme-generique" title="Permanent link">&para;</a></h4>
 <p>La fonction <code>fiche.setMeta</code> prend en entrée une <a href="#injection">métadonnée</a> (paramètre <code>meta</code>) ainsi qu'un <a href="#element-html-de-reference">élément HTML</a> (paramètre <code>content</code>).</p>
-<div class="mermaid">
-graph TD
-   A(Appel de la fonction) --> B{meta est-il null ?}
-   B -->|Non| D(L'élement HTML prend</br>la valeur de meta)
-   B -->|Oui| C(L'élement HTML est vidé)
-</div>
+<div class="mermaid">graph TD
+   A(Appel de la fonction) --&gt; B{meta est-il null ?}
+   B --&gt;|Non| D(L'élement HTML prend&lt;/br&gt;la valeur de meta)
+   B --&gt;|Oui| C(L'élement HTML est vidé)</div>
 
 <h4 id="forme-specifique">Forme spécifique<a class="headerlink" href="#forme-specifique" title="Permanent link">&para;</a></h4>
 <p>Par exemple, la fonction <code>fiche.setDates</code> prend en entrée plusieurs <a href="#injection">métadonnées</a> pour opérer un traitement spécifique.</p>
@@ -811,6 +819,10 @@ graph TD
     <span class="nx">content</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">affichage par langue</p>
+<p>Pour modifier l'affichage du volet selon la langue, rendez-vous sur le <a href="/modifier traduction/#traduire-le-volet-de-description">tutoriel dédié à la traduction</a></p>
 </div>
                 
                   
@@ -846,6 +858,20 @@ graph TD
             </div>
           </a>
         
+        
+          <a href="../modifier%20traduction/" title="Modifier traduction" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Modifier traduction
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>

@@ -576,6 +576,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../modifier%20traduction/" title="Modifier traduction" class="md-nav__link">
+      Modifier traduction
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -648,71 +660,68 @@
 <p class="admonition-title">Avis aux développeurs</p>
 <p>Veillez à ne pas égarer de fichier ou répertoire sans quoi certaines <a href="/bibliotheques">dépendances logicielle</a> du projet pourrait disfonctionner et vous pourriez perdre des fonctionnalités.</p>
 </div>
-<div class="mermaid">
-graph LR
+<div class="mermaid">graph LR
     index.html
     package.json
     gulpfile.js
     /libs
-    /dist --> sass
-    /dist --> scripts
-    /assets --> font
-    /assets --> icons
-    /assets --> main.css
-    /assets --> main.js
-    /data --> entite.json
-    /data --> metas.json
-    /data --> lien.json
-    /data --> /images
-</div>
+    /dist --&gt; sass
+    /dist --&gt; scripts
+    /assets --&gt; font
+    /assets --&gt; icons
+    /assets --&gt; main.css
+    /assets --&gt; main.js
+    /data --&gt; entite.json
+    /data --&gt; metas.json
+    /data --&gt; lien.json
+    /data --&gt; /images</div>
 
 <h2 id="architecture-des-fonctions-du-reseau">Architecture des fonctions du <em>Réseau</em><a class="headerlink" href="#architecture-des-fonctions-du-reseau" title="Permanent link">&para;</a></h2>
-<div class="mermaid">
-flowchart TB
+<div class="mermaid">flowchart TB
     subgraph class network
-        obj_options --> obj_visualisation
+        obj_options --&gt; obj_visualisation
         obj_data
         obj_zoom
         int_selectedNode
     end
 
-    evt_selectNode--> fx_switchNode
-    fx_getNodeMetas--> fx_switchNode
-    fx_switchNode --> fx_zoomToNode
-    fx_switchNode --> fx_fill
-    fx_switchNode --> fx_open
-    fx_switchNode --> int_selectedNode
+    evt_selectNode--&gt; fx_switchNode
+    fx_getNodeMetas--&gt; fx_switchNode
+    fx_switchNode --&gt; fx_zoomToNode
+    fx_switchNode --&gt; fx_fill
+    fx_switchNode --&gt; fx_open
+    fx_switchNode --&gt; int_selectedNode
 
-    fx_chooseColor --> obj_options
+    fx_chooseColor --&gt; obj_options
 
-    obj_data --> |get.filter| fx_getNodeMetas
+    obj_data --&gt; |get.filter| fx_getNodeMetas
 
-    obj_visualisation --> |getPosition| fx_zoomToNode
-    obj_visualisation --> |moveTo| fx_zoomToNode
-    obj_visualisation --> evt_selectNode
-    obj_visualisation --> evt_blurNode
-    obj_visualisation --> evt_hoverNode
-    evt_hoverNode --> obj_data
-    evt_blurNode --> obj_data
-    obj_zoom --> evt_zoom
-    evt_zoom <--> obj_visualisation
+    obj_visualisation --&gt; |getPosition| fx_zoomToNode
+    obj_visualisation --&gt; |moveTo| fx_zoomToNode
+    obj_visualisation --&gt; evt_selectNode
+    obj_visualisation --&gt; evt_blurNode
+    obj_visualisation --&gt; evt_hoverNode
+    evt_hoverNode --&gt; obj_data
+    evt_blurNode --&gt; obj_data
+    obj_zoom --&gt; evt_zoom
+    evt_zoom &lt;--&gt; obj_visualisation
 
-    fx_createNodeObject --> obj_data
-    fx_createEdgeObject --> obj_data
+    fx_createNodeObject --&gt; obj_data
+    fx_createEdgeObject --&gt; obj_data
 
-    fx_findConnectedNodes --> fx_fill
-    obj_data --> fx_findConnectedNodes
-    fx_getNodeMetas--> fx_findConnectedNodes
+    fx_findConnectedNodes --&gt; fx_fill
+    obj_data --&gt; fx_findConnectedNodes
+    fx_getNodeMetas--&gt; fx_findConnectedNodes
 
     subgraph class fiche
         fx_fill
         fx_open
     end
 
-    evt_selectNode --> fx_actualiser
+    evt_selectNode --&gt; fx_actualiser
 
     subgraph class historique
-        fx_actualiser --> fx_init
+        fx_actualiser --&gt; fx_init
     end
 
     subgraph class commands
@@ -721,14 +730,13 @@ flowchart TB
         elt_btnReinitialiser
     end
 
-    elt_btnPlus --> evt_cliq
-    elt_btnMoins --> evt_cliq
-    elt_btnReinitialiser --> evt_cliq
-    obj_zoom --> evt_cliq
-    evt_cliq --> obj_visualisation
+    elt_btnPlus --&gt; evt_cliq
+    elt_btnMoins --&gt; evt_cliq
+    elt_btnReinitialiser --&gt; evt_cliq
+    obj_zoom --&gt; evt_cliq
+    evt_cliq --&gt; obj_visualisation
 
-    obj_visualisation
-</div>
+    obj_visualisation</div>
                 
                   
                 
