@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>https://hyperotlet.github.io/otletosphere/</loc>
+     <loc>https://hyperotlet.github.io/otletosphere/en/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://hyperotlet.github.io/otletosphere/en/process/technical-choices/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://hyperotlet.github.io/otletosphere/en/process/multilingual/</loc>
+     <lastmod>2020-06-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://hyperotlet.github.io/otletosphere/en/process/data-structure/</loc>
      <lastmod>2020-06-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
