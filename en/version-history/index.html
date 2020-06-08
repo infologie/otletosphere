@@ -11,23 +11,23 @@
         <meta name="description" content="Documentation of Otletosphère project">
       
       
-        <link rel="canonical" href="https://hyperotlet.github.io/otletosphere/en/process/data-structure/">
+        <link rel="canonical" href="https://hyperotlet.github.io/otletosphere/en/version-history/">
       
       
-        <meta name="author" content="Guillaume Brioudes <https://myllaume.fr>">
+        <meta name="author" content="['Guillaume Brioudes <https://myllaume.fr/>', 'Olivier Le Deuff']">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
     
     
       
-        <title>Data drawin form Otletosphère</title>
+        <title>History of the versions of the Otletosphere</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a2408e81.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
       
       
         
@@ -41,7 +41,7 @@
     
     
     
-      <link rel="stylesheet" href="../../extras/style.css">
+      <link rel="stylesheet" href="../extras/style.css">
     
     
       
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-redesign" class="md-skip">
+        <a href="#history-and-logic-of-the-project" class="md-skip">
           Aller au contenu
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Data drawin form Otletosphère
+              History of the versions of the Otletosphere
             
           </span>
         </div>
@@ -189,7 +189,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Accueil" class="md-nav__link">
+    <a href=".." title="Accueil" class="md-nav__link">
       Accueil
     </a>
   </li>
@@ -199,12 +199,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Process
@@ -228,7 +226,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../technical-choices/" title="Technical choices" class="md-nav__link">
+    <a href="../process/technical-choices/" title="Technical choices" class="md-nav__link">
       Technical choices
     </a>
   </li>
@@ -240,7 +238,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../multilingual/" title="Multilingual" class="md-nav__link">
+    <a href="../process/multilingual/" title="Multilingual" class="md-nav__link">
       Multilingual
     </a>
   </li>
@@ -249,6 +247,35 @@
           
           
           
+
+
+  <li class="md-nav__item">
+    <a href="../process/data-structure/" title="Data structure" class="md-nav__link">
+      Data structure
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      
 
   
 
@@ -259,14 +286,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Data structure
+        Version history
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Data structure" class="md-nav__link md-nav__link--active">
-      Data structure
+    <a href="./" title="Version history" class="md-nav__link md-nav__link--active">
+      Version history
     </a>
     
       
@@ -283,16 +310,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-redesign" class="md-nav__link">
-    Data redesign
+  <a href="#history-and-logic-of-the-project" class="md-nav__link">
+    History and logic of the project.
   </a>
   
-    <nav class="md-nav" aria-label="Data redesign">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-version" class="md-nav__link">
+    First version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#second-version" class="md-nav__link">
+    Second version
+  </a>
+  
+    <nav class="md-nav" aria-label="Second version">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vocabulary" class="md-nav__link">
-    Vocabulary
+  <a href="#navigation" class="md-nav__link">
+    Navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sustainability" class="md-nav__link">
+    Sustainability
   </a>
   
 </li>
@@ -303,15 +351,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-model" class="md-nav__link">
-    Data model
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history-of-changes" class="md-nav__link">
-    History of changes
+  <a href="#bibliography" class="md-nav__link">
+    Bibliography
   </a>
   
 </li>
@@ -320,35 +361,6 @@
   
 </nav>
     
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../faq/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../version-history/" title="Version history" class="md-nav__link">
-      Version history
-    </a>
   </li>
 
     
@@ -376,16 +388,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-redesign" class="md-nav__link">
-    Data redesign
+  <a href="#history-and-logic-of-the-project" class="md-nav__link">
+    History and logic of the project.
   </a>
   
-    <nav class="md-nav" aria-label="Data redesign">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-version" class="md-nav__link">
+    First version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#second-version" class="md-nav__link">
+    Second version
+  </a>
+  
+    <nav class="md-nav" aria-label="Second version">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#vocabulary" class="md-nav__link">
-    Vocabulary
+  <a href="#navigation" class="md-nav__link">
+    Navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sustainability" class="md-nav__link">
+    Sustainability
   </a>
   
 </li>
@@ -396,15 +429,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-model" class="md-nav__link">
-    Data model
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history-of-changes" class="md-nav__link">
-    History of changes
+  <a href="#bibliography" class="md-nav__link">
+    Bibliography
   </a>
   
 </li>
@@ -425,288 +451,47 @@
                   
                 
                 
-                  <h1>Data structure</h1>
+                  <h1>Version history</h1>
                 
-                <h2 id="data-redesign">Data redesign<a class="headerlink" href="#data-redesign" title="Permanent link">&para;</a></h2>
-<p>The objective is to optimize (faster, more reliable) as much as possible the entries in the Otletosphere for administrators and to gather the injection circuits for developers. The data are currently distributed in two files whose <strong>modifications are not synchronized</strong> automatically and from <strong>free fields</strong>. This may leave room for bugs.</p>
-<p>This template will be integrated in a single spreadsheet (one single <em>GSheet</em> file). The objects each have their own sheet, <code>Entities</code> and <code>Links</code>.</p>
-<p>Other attached sheets (<code>Countries</code>, <code>Relations</code> etc.) will serve as a database as for countries, relations and types. Thus, it will be possible at any time to expand these lists with new entries, thus increasing the (controlled) input possibilities on the site. It will also be an opportunity for each type and relationship to describe the context to which they are linked on their respective sheets, in order to guide the entry.</p>
-<h3 id="vocabulary">Vocabulary<a class="headerlink" href="#vocabulary" title="Permanent link">&para;</a></h3>
+                <h2 id="history-and-logic-of-the-project">History and logic of the project.<a class="headerlink" href="#history-and-logic-of-the-project" title="Permanent link">&para;</a></h2>
+<p>The Otletosphere is a web visualization project that is part of the HyperOtlet research project. The Otletosphere has so far had 2 public versions.
+The development of the otletosphere is part of the HyperOtlet project, funded by the ANR [ANR-17-CE38-0011]. <a href="https://anr.fr/Projet-ANR-17-CE38-0011">https://anr.fr/Projet-ANR-17-CE38-0011</a>
+The project's research notebook is available here <a href="https://hyperotlet.hypotheses.org/">https://hyperotlet.hypotheses.org/</a>.</p>
+<p>The objective is to propose a visualization of the network of people around Paul Otlet.
+The Otletosphere is a relational cartography of the personalities and institutions linked to Paul Otlet.
+The study of Paul Otlet's network of people allows us to imagine a work of collecting the personal relationships he was able to establish during his years of correspondence.
+Based on his correspondence archived at the <a href="http://archives.mundaneum.org/">Mundaneum of Mons which is the museum dedicated to his work</a>, we were able to create a database that includes the different people with whom he came into contact.
+The cartographic representation of a network of people required reflection and graphic influences to achieve an interesting and graphically user-friendly scientific representation.  </p>
+<p>This project is based on the observation of Paul Otlet's strong involvement in international peace organizations as well as in bibliographical and documentary institutions.
+This project is based on the observation of Paul Otlet's strong involvement in international peace organizations as well as in bibliographical and documentary institutions.</p>
+<p>The initial inspiration comes from the graphic representation of the Marvel transmedia universe produced by the team of the Singaporean newspaper "<a href="">The Straits Time</a>", which presents itself as a veritable constellation of superheroes, linked together by their relationships within the narrative universes.</p>
+<h2 id="first-version">First version<a class="headerlink" href="#first-version" title="Permanent link">&para;</a></h2>
+<p>The development started in January 2019 and lays the foundations for the project:</p>
 <ul>
-<li><code>integer</code> : integer</li>
-<li><code>string</code> : string</li>
-<li><code>list</code> : string in a limited lexicon</li>
-<li><code>boolean</code> : "TRUE" or "FALSE"</li>
-<li>The names of the tables, also called "objects" begin with a capital letter: <code>Entity</code>.</li>
-<li>Field names are lowercase: <code>id</code>.</li>
+<li>Theoretical concepts: relations to Otlet and other metadata</li>
+<li>Interface: two sections <em>View</em> and <em>Database</em>, description pane, spatial and linguistic navigation tools</li>
+<li>Graphic charter</li>
+<li>Page <em>About</em></li>
 </ul>
-<h2 id="data-model">Data model<a class="headerlink" href="#data-model" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Objet</th>
-<th>Métadonnée</th>
-<th>Typage</th>
-<th>Lexique</th>
-<th>Commentaire</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Entité</td>
-<td>id</td>
-<td>integer</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>label</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>relation_otlet</td>
-<td>list</td>
-<td>collègue<br />contemporain<br />collaborateur<br />opposant</td>
-<td>From <code>Relations</code>, col <code>label</code></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>type</td>
-<td>list</td>
-<td>personne<br />institution<br />événement<br />œuvre</td>
-<td>From <code>Types</code>, col <code>label</code></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>nom</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>prenom</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>pays</td>
-<td>list</td>
-<td>liste des pays en français</td>
-<td>From <code>Pays</code>, col <code>label_fr</code></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>pays_en</td>
-<td>list</td>
-<td>liste des pays en anglais</td>
-<td>From <code>Pays</code>, col <code>label_en</code></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>discipline</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>discipline_en</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>description</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>description_en</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>image</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>titre</td>
-<td>string</td>
-<td>&lt; 70</td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>lien_wikipedia</td>
-<td>string</td>
-<td>URL</td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>date_naissance</td>
-<td>integer</td>
-<td>&lt; 2020</td>
-<td>Année</td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>date_mort</td>
-<td>integer</td>
-<td>&lt; 2020</td>
-<td>Année</td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>genre</td>
-<td>list</td>
-<td>homme<br />femme</td>
-<td></td>
-</tr>
-<tr>
-<td>Entité</td>
-<td>public</td>
-<td>boolean</td>
-<td></td>
-<td>If public sur le site ou non</td>
-</tr>
-<tr>
-<td>Lien</td>
-<td>from</td>
-<td>integer</td>
-<td><code>Entité.id</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Lien</td>
-<td>to</td>
-<td>integer</td>
-<td><code>Entité.id</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Lien</td>
-<td>label</td>
-<td>string</td>
-<td>&lt; 70</td>
-<td></td>
-</tr>
-<tr>
-<td>Lien</td>
-<td>preuve</td>
-<td>string</td>
-<td>URL</td>
-<td></td>
-</tr>
-<tr>
-<td>Relation</td>
-<td>label</td>
-<td>string</td>
-<td>&lt; 20</td>
-<td></td>
-</tr>
-<tr>
-<td>Relation</td>
-<td>couleur</td>
-<td>string</td>
-<td></td>
-<td>Call sign: no impact on the site</td>
-</tr>
-<tr>
-<td>Relation</td>
-<td>description</td>
-<td>string</td>
-<td></td>
-<td>Call sign: no impact on the site</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>label</td>
-<td>string</td>
-<td>&lt; 20</td>
-<td></td>
-</tr>
-<tr>
-<td>Type</td>
-<td>description</td>
-<td>string</td>
-<td></td>
-<td>Call sign: no impact on the site</td>
-</tr>
-<tr>
-<td>Pays</td>
-<td>label_fr</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Pays</td>
-<td>label_en</td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Network</td>
-<td>from</td>
-<td>integer</td>
-<td><code>Entité.id</code></td>
-<td>From <code>Entité</code>, col <code>id</code></td>
-</tr>
-<tr>
-<td>Network</td>
-<td>to</td>
-<td>integer</td>
-<td><code>Entité.id</code></td>
-<td>From <code>Entité</code>, col <code>id</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="history-of-changes">History of changes<a class="headerlink" href="#history-of-changes" title="Permanent link">&para;</a></h2>
-<p>The following is an exhaustive list of changes presented first as a list and then as a table.</p>
-<p>Everything will be unified in a single spreadsheet (a single <em>GSheet</em> file).</p>
+<p>The basic idea came from Olivier Le Deuff, a lecturer in information and communication sciences at Bordeaux Montaigne University, who wanted to create an interactive visualization around Otlet. Jean David, student in master 2 DNDH is then in charge of the realization of the first prototype. Arthur Perret and Clément Borel bring their skills on data, graphics, design, typography, etc... </p>
+<h2 id="second-version">Second version<a class="headerlink" href="#second-version" title="Permanent link">&para;</a></h2>
+<p>The development starts in April 2020 and consists in redesigning a theoretically accomplished work with a complete interface. Apart from the addition of navigation tools, it is a project of perpetuation, harmonization and design.</p>
+<p>We note the following major modifications:</p>
+<h3 id="navigation">Navigation<a class="headerlink" href="#navigation" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Entities' table</li>
-<li>Deleted columns :<ul>
-<li><code>shape</code> because automatable such that if <code>relation_otlet</code> == institution, then <code>shape</code> = "square", otherwise <code>shape</code> = "round"</li>
-<li><code>brokenImage</code> can be automated in the same way as <code>shape</code>.</li>
+<li>addition of a search tool</li>
+<li>merge the <em>View</em> and <em>Database</em> sections to give <em>Network</em> and <em>Cards</em>.</li>
+<li>description pane: display connections between nodes and <a href="">junction</a> between <em>Network</em> and <em>Sheets</em> with the <em>View</em> button</li>
+<li>browsing history</li>
 </ul>
-</li>
-<li>Modified Column :<ul>
-<li><code>relation</code>renamed <code>title</code></li>
-<li><code>gender</code> renamed <code>genre</code></li>
-<li><code>group</code> renamed <code>relation_otlet</code>.</li>
-<li>date_birth" and "date_death" are expressed in years.</li>
+<h3 id="sustainability">Sustainability<a class="headerlink" href="#sustainability" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Data: structure the data entry in a single <em>GSheet</em> and make the injection sustainable.</li>
+<li>Programming: update dependencies and refactor the code</li>
+<li>Facilitate (re)use: documentation and opening of source code with API</li>
 </ul>
-</li>
-<li>Added columns :<ul>
-<li><code>public</code> allowing to hide a content which is not integrated to the site : we can then modify it without fear of breaking the interface</li>
-</ul>
-</li>
-<li>Table <code>Links</code></li>
-<li>Modified columns<ul>
-<li><code>from</code> and <code>to</code> replace <code>from_name</code> and <code>to_name</code>. No <code>id</code> will be entered manually, but automatically, depending on the <code>label' referenced in one of the two fields. The</code>id' will be entered automatically on the <code>Network' sheet, and will be automatically added/exchanged when a</code>label' is added/exchanged in <code>from' or</code>to'.</li>
-<li><code>Proof of relationship</code> renamed <code>proof</code> and could only take the form of a URL (to a site, an image) to facilitate its integration on the site.</li>
-<li><code>title</code>renamed `label</li>
-</ul>
-</li>
-</ul>
+<h2 id="bibliography">Bibliography<a class="headerlink" href="#bibliography" title="Permanent link">&para;</a></h2>
+<p>Olivier Le Deuff, Jean David, Arthur Perret, Clément Borel. Surfer dans l'Otletosphère Des outils pour visualiser et interroger le réseau de Paul Otlet. H2PTM’19. De l’hypertexte aux humanités numériques, Roxin Ioan, Oct 2019, Montbelliard, France. p.65-76. disponible <a href="https://archivesic.ccsd.cnrs.fr/sic_02480515">ici</a>.</p>
                 
                   
                 
@@ -727,7 +512,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../multilingual/" title="Multilingual" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../faq/" title="FAQ" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -736,25 +521,11 @@
                 <span class="md-footer-nav__direction">
                   Précédent
                 </span>
-                Multilingual
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../faq/" title="FAQ" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Suivant
-                </span>
                 FAQ
               </div>
             </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
           </a>
+        
         
       </nav>
     </div>
@@ -779,15 +550,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
       
       <script>
         app = initialize({
-          base: "../..",
+          base: "..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

@@ -14,7 +14,3 @@
 .md-typeset table:not([class]) {
     font-size: unset !important ;
 }
-
-thead th {
-    font-weight: bold;
-}
