@@ -357,7 +357,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../historique versions.md" title="Historique" class="md-nav__link">
+    <a href="../../historique-versions/" title="Historique" class="md-nav__link">
       Historique
     </a>
   </li>
@@ -719,8 +719,8 @@
                 
                   <h1>Modifier traduction</h1>
                 
-                <p>Dans l'<a href="/elements interface/#entete">entête</a> se trouvent les commandes de traduction : des boutons permettent de changer de langue sur le site en activant un script qui vient parcourir l'ensemble de la page, trouve les éléments à traduire et leur traduction pour mettre la seconde en place.</p>
-<p>Le script se trouve dans le fichier <code>/dist/scripts/translate.js</code> et <a href="/modifier code source">peut être modifié de différentes manière selon l'approche</a> que vous avez choisi pour modifier le code source.</p>
+                <p>Dans l'<a href="../../utilisation/elements-interface/#entete">entête</a> se trouvent les commandes de traduction : des boutons permettent de changer de langue sur le site en activant un script qui vient parcourir l'ensemble de la page, trouve les éléments à traduire et leur traduction pour mettre la seconde en place.</p>
+<p>Le script se trouve dans le fichier <code>/dist/scripts/translate.js</code> et <a href="../outils-developpement/">peut être modifié de différentes manière selon l'approche</a> que vous avez choisi pour modifier le code source.</p>
 <h2 id="traduire-un-element">Traduire un élément<a class="headerlink" href="#traduire-un-element" title="Permanent link">&para;</a></h2>
 <p>Pour qu'un élément intégré en HTML dans <code>index.html</code> soit automatiquement traduit, vous devez lui appliquer les attributs présentés ci-dessous. <code>data-lang-fr</code> contient sa traduction française et <code>data-lang-en</code> contient sa traduction anglaise. Le simple fait d'appliquer l'une de ces balises à un élément enclenche sa traduction systématique. Attention à bien lui appliquer toutes les langues disponibles.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h3</span> <span class="na">data-lang-fr</span><span class="o">=</span><span class="s">&quot;Connexions&quot;</span> <span class="na">data-lang-en</span><span class="o">=</span><span class="s">&quot;Connection&quot;</span><span class="p">&gt;</span>Connexions<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
@@ -737,7 +737,7 @@
 <p>Dès lors, toute balise portant l'attribut <code>data-lang-ru="Lorem ipsum"</code> aura son texte changé en "Lorem ipsum" au clic que le bouton correpondant.</p>
 </div>
 <h3 id="styliser-le-bouton">Styliser le bouton<a class="headerlink" href="#styliser-le-bouton" title="Permanent link">&para;</a></h3>
-<p>Selon <a href="/modifier code source">l'approche</a> que vous avez choisi pour modifier le code source vous devrez suivre les consignes pour le SCSS ou le CSS.</p>
+<p>Selon <a href="../outils-developpement/">l'approche</a> que vous avez choisi pour modifier le code source vous devrez suivre les consignes pour le SCSS ou le CSS.</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">CSS</label><div class="tabbed-content">
 <p>Dans <code>/assets/main.css</code>, retrouvez le selecteur <code>lang-box__flag</code> en dessous duquel vous pourrez ajouter les lignes suivantes et remplacer soit <code>lang_ru.svg</code> par le nom de l'image de votre choix soit le chemin complet <code>./icons/lang_ru.svg</code> si votre image ne se trouve pas dans le repertoire <code>/assets/icons/</code>.
 <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">lang-box__flag--ru</span> <span class="p">{</span>
@@ -774,8 +774,8 @@ Sinon, vous pouvez intégrer le code suivant au sein de <code>/dist/sass/layout/
 
     style evtclick fill:#4051b5,color:#fff</div>
 
-<p>Dans la fonction <code>fill</code> de l'objet <code>fiche</code> inscrit dans le fichier <code>/dist/scripts/fiche.js</code> se trouve ce <em>switcher</em> qui va vous permettre d'alterner l'affichage des métadonnées au sein du <a href="/elements interface/#volet-de-description">volet de description</a> selon la langue active.</p>
-<p>Pour chaque <code>case</code> correspondant à une langue vous allez pouvoir activer certaines <a href="/modifier volet/#injection">fonctions d'affichage</a> du volet.</p>
+<p>Dans la fonction <code>fill</code> de l'objet <code>fiche</code> inscrit dans le fichier <code>/dist/scripts/fiche.js</code> se trouve ce <em>switcher</em> qui va vous permettre d'alterner l'affichage des métadonnées au sein du <a href="../../utilisation/elements-interface/#volet-de-description">volet de description</a> selon la langue active.</p>
+<p>Pour chaque <code>case</code> correspondant à une langue vous allez pouvoir activer certaines <a href="../modifier-volet/#injection">fonctions d'affichage</a> du volet.</p>
 <div class="highlight"><pre><span></span><code><span class="k">switch</span> <span class="p">(</span><span class="nx">langage</span><span class="p">.</span><span class="nx">actual</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="s1">&#39;Fr&#39;</span><span class="o">:</span>
         <span class="c1">// fonctinos pour le français</span>
