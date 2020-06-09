@@ -632,13 +632,13 @@
 <h3 id="data-format">Data format<a class="headerlink" href="#data-format" title="Permanent link">&para;</a></h3>
 <p>The data integrity constraint is strong. <strong>It is necessary to link the different objects by their identifiers</strong>, taking care during data entry to respect the typing and relational logic at the heart of the software.</p>
 <div class="admonition bug">
-<p class="admonition-title">Valeur vide, valeur nulle</p>
+<p class="admonition-title">Empty value, null value</p>
 <p>Make sure that any values not filled in are typed as "null" in your JSON files. Otherwise fields may appear empty.</p>
 </div>
 <h4 id="entities">Entities<a class="headerlink" href="#entities" title="Permanent link">&para;</a></h4>
 <p>This involves registering all the entities that will be integrated into the <em>Network</em> and <em>Sheets</em> views of the site.</p>
 <p>Below is a sample <code>entite.json</code> file and its data table describing the typing of the different values.</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Fichier JSON</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">JSON File</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Paul Otlet&quot;</span><span class="p">,</span>
@@ -663,13 +663,13 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Table de données</label><div class="tabbed-content">
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Data table</label><div class="tabbed-content">
 <table>
 <thead>
 <tr>
-<th>Clé</th>
-<th>Valeur</th>
-<th>Commentaire</th>
+<th>Key</th>
+<th>Value</th>
+<th>Comment</th>
 </tr>
 </thead>
 <tbody>
@@ -755,7 +755,7 @@
 <h4 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h4>
 <p>This defines the relationships between entities created according to the above model as they will appear in the <em>Network</em> view and the <em>Connections</em> portion of the <a href="">View Pane</a>.</p>
 <p>Below is a sample `lien.json' file and its data table.</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Fichier JSON</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">JSON file</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -773,13 +773,13 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Table de données</label><div class="tabbed-content">
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Data table</label><div class="tabbed-content">
 <table>
 <thead>
 <tr>
-<th>Clé</th>
-<th>Valeur</th>
-<th>Valeur</th>
+<th>Key</th>
+<th>Value</th>
+<th>Comment</th>
 </tr>
 </thead>
 <tbody>
@@ -861,8 +861,8 @@
 In the same tab is now displayed the tool: once on your <em>Entities</em> or <em>Links</em> sheet, click on <em>Open Sidebar</em> and enter the following configuration (settings not mentioned below are on <em>off</em>, unchecked) :
 <div class="highlight"><pre><span></span><code>Export Format : JSON
 Export Sheet(s) : Current Sheet only
-Include first column : oui
-Export contents as array : oui
+Include first column : yes
+Export contents as array : yes
 </code></pre></div>
 The buttons at the bottom of the <em>Sidebar</em> allow you to complete the operation. All you have to do is to integrate the files in the <code>/data</code> directory of the <a href="">software tree</a>.</p>
 </details>
