@@ -32,6 +32,14 @@
      <lastmod>2020-06-09</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://hyperotlet.github.io/otletosphere/en/faq/</loc>
+     <lastmod>2020-06-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://hyperotlet.github.io/otletosphere/en/version-history/</loc>
+     <lastmod>2020-06-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://hyperotlet.github.io/otletosphere/en/development/architecture-source-code/</loc>
      <lastmod>2020-06-09</lastmod>
      <changefreq>daily</changefreq>
@@ -48,11 +56,19 @@
      <lastmod>2020-06-09</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://hyperotlet.github.io/otletosphere/en/faq/</loc>
+     <loc>https://hyperotlet.github.io/otletosphere/en/modify-source-code/dev-tools/</loc>
      <lastmod>2020-06-09</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://hyperotlet.github.io/otletosphere/en/version-history/</loc>
+     <loc>https://hyperotlet.github.io/otletosphere/en/modify-source-code/modify-groups/</loc>
+     <lastmod>2020-06-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://hyperotlet.github.io/otletosphere/en/modify-source-code/modify-description-panel/</loc>
+     <lastmod>2020-06-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://hyperotlet.github.io/otletosphere/en/modify-source-code/modify-translation/</loc>
      <lastmod>2020-06-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
