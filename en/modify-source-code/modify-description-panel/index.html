@@ -748,55 +748,44 @@
                 <p>This tutorial will describe how to modify the content of the <a href="../../usage/interface-elements/#description-panel">description pane</a>, i.e. how to display the information available for each <a href="../../usage/entities-selection/#methods">selected entity</a>.</p>
 <p>The following changes are made in the <code>/dist/scripts/fiche.js</code> file if you <a href="../dev-tools/#using-the-development-tools">use the development tools</a>. Otherwise you will need to modify the <code>/assets/main.js</code> file.</p>
 <h2 id="object-architecture">Object architecture<a class="headerlink" href="#object-architecture" title="Permanent link">&para;</a></h2>
-<div class="mermaid">graph TD
-    1[switchNode]
-    2((fiche))
-    3[fill]
-    4[findConnectedNodes]
-    5((network))
-    6((visualisation))
-    7((data))
-    8[getNodeMetas]
-    9[getConnectedNodes]
-    10[getConnectedEdges]
-    11((edges))
-    12[get]
-    13((nodes))
-    14[get]
-    15[setConnexion]
-    16[setMeta]
+<div class="mermaid">graph LR
+    obj_network((Network))
+    obj_data((Data))
+    obj_nodes((Nodes))
+    obj_edges((Edges))
+    fx_getnodemetas[getNodeMetas]
+    obj_visualisation((Visualisation))
+    fx_getconnectednodes[getConnectedNodes]
+    fx_getconnectededges[getConnectedEdges]
+    fx_findconnectednodes[findConnectedNodes]
+    fx_fill[Fiche.fill]
+    fx_switchnode[switchNode]
+    evtclick{{Clic sur bouton traduction}}
 
-    style 3 fill:#4051b5,color:#fff
+    obj_network --&gt; obj_data
+    obj_data --&gt; obj_nodes
+    obj_data --&gt; obj_edges
+    obj_nodes --&gt; fx_getnodemetas
+    obj_network --&gt; obj_visualisation
+    obj_visualisation --&gt; fx_getconnectednodes
+    obj_visualisation --&gt; fx_getconnectededges
+    fx_getconnectednodes --&gt; fx_findconnectednodes
+    fx_getconnectededges --&gt; fx_findconnectednodes
+    obj_edges --&gt; fx_findconnectednodes
+    fx_findconnectednodes --&gt; fx_fill
+    fx_getnodemetas --&gt; fx_fill
 
-    1 --&gt; 3
-    2 -.- 3
-    4 --&gt; 3
-    5 -.- 6
-    5 -.- 7
-    8 --&gt; 1
-    6 --&gt; 9
-    6 --&gt; 10
-    9 --&gt; 4
-    10 --&gt; 4
-    7 -.- 11
-    11 --&gt; 12
-    12 --&gt; 4
-    7 -.- 13
-    13 --&gt; 14
-    14 --&gt; 8
-    2 -.- 15
-    2 -.- 16
-    3 --&gt; 15
-    3 --&gt; 16</div>
+    fx_switchnode --&gt; fx_fill
+    evtclick --&gt; fx_fill
 
-<p>We will modify the <code>fill</code> function of the <code>fiche</code> object (noted <code>fiche.fill</code>). This function has two inputs:</p>
-<ul>
-<li><code>nodeMetas</code> is an object containing all the metadata of the selected entity (provided by the <code>getNodeMetas</code> function).</li>
-<li><code>nodeConnectedList</code> is an array containing all the links and their metadata (provided by the <code>findConnectedNodes</code> function).</li>
-</ul>
-<p>It will then redirect the accumulated data to functions that will generate the HTML required for display and inject it into the <a href="#reference-html-element">HTML tags</a> of the description pane. These tags are referenced in the `fiche.fields' object.</p>
+    style fx_fill fill:#4051b5,color:#fff
+    style fx_switchnode fill:#4051b5,color:#fff
+    style evtclick fill:#4051b5,color:#fff</div>
+
+<p>We will focus on the <code>fill</code> function of the <code>fiche</code> object (noted <code>fiche.fill</code>). It is self-contained in the sense that calling <code class="highlight"><span class="nx">fiche</span><span class="p">.</span><span class="nx">fill</span><span class="p">()</span></code> will always complete the contents of the description pane with the currently selected node (global value <code class="highlight"><span class="nx">network</span><span class="p">.</span><span class="nx">selectedNode</span></code>) and in the right language (global value <code class="highlight"><span class="nx">language</span><span class="p">.</span><span class="nx">actual</span></code>).</p>
+<p>This function returns the data it retrieves to other functions of the <code>fiche</code> object. It is these functions that will generate the HTML needed for the display and inject it into the <a href="#reference-html-element">HTML tags</a> of the description pane. These tags are referenced in the `fiche.fields' object.</p>
 <h3 id="injection">Injection<a class="headerlink" href="#injection" title="Permanent link">&para;</a></h3>
-<p>The injection functions are all prefixed <code>set</code> and can take two forms.</p>
+<p>The injection functions are all contained in the <code>fiche' object and are prefixed</code>set'. They can take two shapes.</p>
 <p>In all cases they receive the metadata of an attribute of the <code>nodeMetas' object:</code>nodeMetas.year_birth<code>corresponds to the metadata</code>year_birth`.</p>
 <div class="highlight"><pre><span></span><code>    <span class="p">[</span>
         <span class="p">{</span>

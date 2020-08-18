@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#saisie-des-donnees" class="md-skip">
+        <a href="#modele-des-donnees" class="md-skip">
           Aller au contenu
         </a>
       
@@ -493,11 +493,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#saisie-des-donnees" class="md-nav__link">
-    Saisie des données
+  <a href="#modele-des-donnees" class="md-nav__link">
+    Modèle des données
   </a>
   
-    <nav class="md-nav" aria-label="Saisie des données">
+    <nav class="md-nav" aria-label="Modèle des données">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -533,11 +533,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#saisie" class="md-nav__link">
-    Saisie
+  <a href="#injection-des-donnees" class="md-nav__link">
+    Injection des données
   </a>
   
-    <nav class="md-nav" aria-label="Saisie">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saisie-des-donnees" class="md-nav__link">
+    Saisie des données
+  </a>
+  
+    <nav class="md-nav" aria-label="Saisie des données">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -698,11 +705,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#saisie-des-donnees" class="md-nav__link">
-    Saisie des données
+  <a href="#modele-des-donnees" class="md-nav__link">
+    Modèle des données
   </a>
   
-    <nav class="md-nav" aria-label="Saisie des données">
+    <nav class="md-nav" aria-label="Modèle des données">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -738,11 +745,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#saisie" class="md-nav__link">
-    Saisie
+  <a href="#injection-des-donnees" class="md-nav__link">
+    Injection des données
   </a>
   
-    <nav class="md-nav" aria-label="Saisie">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saisie-des-donnees" class="md-nav__link">
+    Saisie des données
+  </a>
+  
+    <nav class="md-nav" aria-label="Saisie des données">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -795,7 +809,7 @@
                 
                   <h1>Inscrire données</h1>
                 
-                <h2 id="saisie-des-donnees">Saisie des données<a class="headerlink" href="#saisie-des-donnees" title="Permanent link">&para;</a></h2>
+                <h2 id="modele-des-donnees">Modèle des données<a class="headerlink" href="#modele-des-donnees" title="Permanent link">&para;</a></h2>
 <p>Vous trouverez dans l'<a href="../architecture-code-source/#arborescence-de-fichier">arborescence du répertoire</a> Otletosphère les deux fichiers d'exemple en JSON : <code>entite.json</code> et <code>lien.json</code>. Pour apporter votre propre contenu il vous faut remplacer les valeurs inscrites dans ces fichiers selon les recommandations présentées sur cette page.</p>
 <h3 id="format-des-donnees">Format des données<a class="headerlink" href="#format-des-donnees" title="Permanent link">&para;</a></h3>
 <p>La contrainte d'intégrité des données est forte. <strong>Il est nécessaire de relier les différents objets par leurs identifiants</strong> en prenant soin durant l'inscription des données de respecter le typage et la logique relationnelle au cœur du logiciel.</p>
@@ -975,7 +989,35 @@
 </table>
 </div>
 </div>
-<h2 id="saisie">Saisie<a class="headerlink" href="#saisie" title="Permanent link">&para;</a></h2>
+<h2 id="injection-des-donnees">Injection des données<a class="headerlink" href="#injection-des-donnees" title="Permanent link">&para;</a></h2>
+<p>Pour personnaliser l'injection des données (leur intégration dans le logiciel via les fichiers JSON), vous devez modifier le fichier <code>/dist/scripts/fetch.js</code>. Il <a href="../../modifier_code/outils-developpement/">peut être modifié de différentes manière selon l'approche</a> que vous avez choisi pour modifier le code source.</p>
+<p><code class="highlight"><span class="nx">network</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">nodes</span><span class="p">.</span><span class="nx">add</span></code> et <code class="highlight"><span class="nx">network</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">edges</span><span class="p">.</span><span class="nx">add</span></code> sont les deux fonctions permettant d'injecter les données respectivement comme nœuds et liens. Vous trouverez plus d'informations dans <a href="https://github.com/visjs/vis-network#example">cet exemple de la documentation de VisJs</a>. Ces deux fonctions recoivent en paramètre un tableau formé avec la fonction <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map"><code class="highlight"><span class="nb">Array</span><span class="p">.</span><span class="nx">map</span><span class="p">()</span></code></a> (voir code ci-dessous). Elle permet ainsi de transformer les données des fichiers JSON un objet prévu pour le logiciel, avec entre autres des valeurs prévues pour la <a href="../../modifier_code/modifier-traduction/#traduire-les-données">traduction</a>, mais aussi pour l'affichage dans la <a href="../../utilisation/elements-interface/#reseau">visualisation</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">network</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">nodes</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span>
+    <span class="nx">entites</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">entite</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">entiteObj</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1">// entite metas</span>
+            <span class="nx">id</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+            <span class="nx">label</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">label</span><span class="p">,</span>
+            <span class="nx">title</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">titre</span><span class="p">,</span>
+            <span class="nx">title_fr</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">titre</span><span class="p">,</span>
+            <span class="nx">title_en</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">titre_en</span><span class="p">,</span>
+            <span class="nx">image</span><span class="o">:</span> <span class="s1">&#39;/otletosphere/assets/photos/&#39;</span> <span class="o">+</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">photo</span><span class="p">,</span>
+
+            <span class="c1">// node style</span>
+            <span class="nx">size</span> <span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+            <span class="nx">margin</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+            <span class="nx">font</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">face</span><span class="o">:</span> <span class="s1">&#39;Open Sans&#39;</span>
+                <span class="p">...</span>
+            <span class="p">}</span>
+        <span class="p">};</span>
+
+        <span class="k">return</span> <span class="nx">entiteObj</span><span class="p">;</span>
+    <span class="p">})</span>
+<span class="p">);</span>
+</code></pre></div>
+
+<h2 id="saisie-des-donnees">Saisie des données<a class="headerlink" href="#saisie-des-donnees" title="Permanent link">&para;</a></h2>
 <p>Afin de compléter, éventuellement de manière collaborative, votre base de données avec les nombreuses métadonnées, tout en respectant les contraintes d'intégrité et avec la possibilité d'exporter facilement en JSON, nous vous conseillons de passer par un logiciel type tableur.</p>
 <p>Voici une proposition de <em>workflow</em>, de circulation des données.</p>
 <div class="mermaid">flowchart TD

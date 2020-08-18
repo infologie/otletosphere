@@ -748,55 +748,44 @@
                 <p>Ce tutoriel va décrire comment modifier le contenu du <a href="../../utilisation/elements-interface/">volet de description</a>, à savoir l'affichage des informations disponibles pour chaque <a href="../../utilisation/selection-entites/#methodes">entité sélectionnée</a>.</p>
 <p>Les modifications suivantes s'effectuent dans le fichier <code>/dist/scripts/fiche.js</code> si vous <a href="../outils-developpement/#utiliser-les-outils-de-developpement">utilisez les outils de développements</a>. Sinon vous devrez modifier le fichier <code>/assets/main.js</code>.</p>
 <h2 id="architecture-de-lobjet-fiche">Architecture de l'objet <em>Fiche</em><a class="headerlink" href="#architecture-de-lobjet-fiche" title="Permanent link">&para;</a></h2>
-<div class="mermaid">graph TD
-    1[switchNode]
-    2((fiche))
-    3[fill]
-    4[findConnectedNodes]
-    5((network))
-    6((visualisation))
-    7((data))
-    8[getNodeMetas]
-    9[getConnectedNodes]
-    10[getConnectedEdges]
-    11((edges))
-    12[get]
-    13((nodes))
-    14[get]
-    15[setConnexion]
-    16[setMeta]
+<div class="mermaid">graph LR
+    obj_network((Network))
+    obj_data((Data))
+    obj_nodes((Nodes))
+    obj_edges((Edges))
+    fx_getnodemetas[getNodeMetas]
+    obj_visualisation((Visualisation))
+    fx_getconnectednodes[getConnectedNodes]
+    fx_getconnectededges[getConnectedEdges]
+    fx_findconnectednodes[findConnectedNodes]
+    fx_fill[Fiche.fill]
+    fx_switchnode[switchNode]
+    evtclick{{Clic sur bouton traduction}}
 
-    style 3 fill:#4051b5,color:#fff
+    obj_network --&gt; obj_data
+    obj_data --&gt; obj_nodes
+    obj_data --&gt; obj_edges
+    obj_nodes --&gt; fx_getnodemetas
+    obj_network --&gt; obj_visualisation
+    obj_visualisation --&gt; fx_getconnectednodes
+    obj_visualisation --&gt; fx_getconnectededges
+    fx_getconnectednodes --&gt; fx_findconnectednodes
+    fx_getconnectededges --&gt; fx_findconnectednodes
+    obj_edges --&gt; fx_findconnectednodes
+    fx_findconnectednodes --&gt; fx_fill
+    fx_getnodemetas --&gt; fx_fill
 
-    1 --&gt; 3
-    2 -.- 3
-    4 --&gt; 3
-    5 -.- 6
-    5 -.- 7
-    8 --&gt; 1
-    6 --&gt; 9
-    6 --&gt; 10
-    9 --&gt; 4
-    10 --&gt; 4
-    7 -.- 11
-    11 --&gt; 12
-    12 --&gt; 4
-    7 -.- 13
-    13 --&gt; 14
-    14 --&gt; 8
-    2 -.- 15
-    2 -.- 16
-    3 --&gt; 15
-    3 --&gt; 16</div>
+    fx_switchnode --&gt; fx_fill
+    evtclick --&gt; fx_fill
 
-<p>Nous allons modifier la fonction <code>fill</code> de l'objet <code>fiche</code> (noté <code>fiche.fill</code>). Cette fonction possède deux entrées :</p>
-<ul>
-<li><code>nodeMetas</code> est un objet contenant toutes les métadonnées de l'entité sélectionnée (fourni par la fonction <code>getNodeMetas</code>).</li>
-<li><code>nodeConnectedList</code> est un tableau contenant tous les liens et leurs métadonnées (fourni par la fonction <code>findConnectedNodes</code>)</li>
-</ul>
-<p>Elle va ensuite rediriger les données accumulées vers des fonctions qui vont générer le HTML nécessaire à l'affichage et l'injecter dans les <a href="#element-html-de-reference">balises HTML</a> du volet de description. Ces balises sont référencées dans l'objet <code>fiche.fields</code>.</p>
+    style fx_fill fill:#4051b5,color:#fff
+    style fx_switchnode fill:#4051b5,color:#fff
+    style evtclick fill:#4051b5,color:#fff</div>
+
+<p>Nous allons nous interesser à la fonction <code>fill</code> de l'objet <code>fiche</code> (noté <code>fiche.fill</code>). Elle est autonome dans le sens où appeler <code class="highlight"><span class="nx">fiche</span><span class="p">.</span><span class="nx">fill</span><span class="p">()</span></code> permettra toujours de compléter le contenu du volet de description avec le nœud actuellement sélectionné (valeur globale <code class="highlight"><span class="nx">network</span><span class="p">.</span><span class="nx">selectedNode</span></code>) et dans la bonne langue (valeur globale <code class="highlight"><span class="nx">langage</span><span class="p">.</span><span class="nx">actual</span></code>).</p>
+<p>Cette fonction renvoie les données qu'elle récupère  vers d'autres fonctions de l'objet <code>fiche</code>. Ce sont ces fonctions qui vont générer le HTML nécessaire à l'affichage et l'injecter dans les <a href="#element-html-de-reference">balises HTML</a> du volet de description. Ces balises sont référencées dans l'objet <code>fiche.fields</code>.</p>
 <h3 id="injection">Injection<a class="headerlink" href="#injection" title="Permanent link">&para;</a></h3>
-<p>Les fonctions d'injection sont toutes préfixées <code>set</code> et peuvent prendre deux formes.</p>
+<p>Les fonctions d'injection sont toutes contenues dans l'objet <code>fiche</code> et sont préfixées <code>set</code>. Elles peuvent prendre deux formes.</p>
 <p>Dans tous les cas elles reçoivent les métadonnées d'un attribut de l'objet <code>nodeMetas</code> : <code>nodeMetas.annee_naissance</code> correspond à la métadonnée <code>annee_naissance</code>.</p>
 <div class="highlight"><pre><span></span><code>    <span class="p">[</span>
         <span class="p">{</span>

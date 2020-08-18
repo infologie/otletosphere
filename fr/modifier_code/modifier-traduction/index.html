@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#traduire-un-element" class="md-skip">
+        <a href="#traduire-un-element-de-linterface" class="md-skip">
           Aller au contenu
         </a>
       
@@ -568,23 +568,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#traduire-un-element" class="md-nav__link">
-    Traduire un élément
+  <a href="#traduire-un-element-de-linterface" class="md-nav__link">
+    Traduire un élément de l'interface
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ajouter-une-langue" class="md-nav__link">
-    Ajouter une langue
-  </a>
-  
-    <nav class="md-nav" aria-label="Ajouter une langue">
+    <nav class="md-nav" aria-label="Traduire un élément de l'interface">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#styliser-le-bouton" class="md-nav__link">
-    Styliser le bouton
+  <a href="#ajouter-une-langue" class="md-nav__link">
+    Ajouter une langue
   </a>
   
 </li>
@@ -595,16 +588,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#traduire-le-volet-de-description" class="md-nav__link">
-    Traduire le volet de description
+  <a href="#traduire-les-donnees" class="md-nav__link">
+    Traduire les données
   </a>
   
-    <nav class="md-nav" aria-label="Traduire le volet de description">
+    <nav class="md-nav" aria-label="Traduire les données">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#langue-par-defaut" class="md-nav__link">
-    Langue par défaut
+  <a href="#ajouter-une-langue_1" class="md-nav__link">
+    Ajouter une langue
   </a>
   
 </li>
@@ -667,23 +660,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#traduire-un-element" class="md-nav__link">
-    Traduire un élément
+  <a href="#traduire-un-element-de-linterface" class="md-nav__link">
+    Traduire un élément de l'interface
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ajouter-une-langue" class="md-nav__link">
-    Ajouter une langue
-  </a>
-  
-    <nav class="md-nav" aria-label="Ajouter une langue">
+    <nav class="md-nav" aria-label="Traduire un élément de l'interface">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#styliser-le-bouton" class="md-nav__link">
-    Styliser le bouton
+  <a href="#ajouter-une-langue" class="md-nav__link">
+    Ajouter une langue
   </a>
   
 </li>
@@ -694,16 +680,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#traduire-le-volet-de-description" class="md-nav__link">
-    Traduire le volet de description
+  <a href="#traduire-les-donnees" class="md-nav__link">
+    Traduire les données
   </a>
   
-    <nav class="md-nav" aria-label="Traduire le volet de description">
+    <nav class="md-nav" aria-label="Traduire les données">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#langue-par-defaut" class="md-nav__link">
-    Langue par défaut
+  <a href="#ajouter-une-langue_1" class="md-nav__link">
+    Ajouter une langue
   </a>
   
 </li>
@@ -733,12 +719,12 @@
                 
                 <p>Dans l'<a href="../../utilisation/elements-interface/#entete">entête</a> se trouvent les commandes de traduction : des boutons permettent de changer de langue sur le site en activant un script qui vient parcourir l'ensemble de la page, trouve les éléments à traduire et leur traduction pour mettre la seconde en place.</p>
 <p>Le script se trouve dans le fichier <code>/dist/scripts/translate.js</code> et <a href="../outils-developpement/">peut être modifié de différentes manière selon l'approche</a> que vous avez choisi pour modifier le code source.</p>
-<h2 id="traduire-un-element">Traduire un élément<a class="headerlink" href="#traduire-un-element" title="Permanent link">&para;</a></h2>
+<h2 id="traduire-un-element-de-linterface">Traduire un élément de l'interface<a class="headerlink" href="#traduire-un-element-de-linterface" title="Permanent link">&para;</a></h2>
 <p>Pour qu'un élément intégré en HTML dans <code>index.html</code> soit automatiquement traduit, vous devez lui appliquer les attributs présentés ci-dessous. <code>data-lang-fr</code> contient sa traduction française et <code>data-lang-en</code> contient sa traduction anglaise. Le simple fait d'appliquer l'une de ces balises à un élément enclenche sa traduction systématique. Attention à bien lui appliquer toutes les langues disponibles.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h3</span> <span class="na">data-lang-fr</span><span class="o">=</span><span class="s">&quot;Connexions&quot;</span> <span class="na">data-lang-en</span><span class="o">=</span><span class="s">&quot;Connection&quot;</span><span class="p">&gt;</span>Connexions<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 </code></pre></div>
 
-<h2 id="ajouter-une-langue">Ajouter une langue<a class="headerlink" href="#ajouter-une-langue" title="Permanent link">&para;</a></h2>
+<h3 id="ajouter-une-langue">Ajouter une langue<a class="headerlink" href="#ajouter-une-langue" title="Permanent link">&para;</a></h3>
 <p>Pour ajouter une langue, il vous faut ajouter son bouton de référence dans <code>index.html</code>. Vous pouvez le placer dans la balise <code class="highlight"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;lang-box&quot;</span><span class="p">&gt;</span></code> ou ailleurs. Il s'inscrit de la manière suivante pour inclure la langue russe, par exemple : les attributs <code>id</code>, <code>data-lang</code> et <code>class</code> sont tous trois impactés.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lang-ru&quot;</span> <span class="na">data-lang</span><span class="o">=</span><span class="s">&quot;Ru&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;lang-box__flag lang-box__flag--ru&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -748,78 +734,52 @@
 <p class="admonition-title">Success</p>
 <p>Dès lors, toute balise portant l'attribut <code>data-lang-ru="Lorem ipsum"</code> aura son texte changé en "Lorem ipsum" au clic que le bouton correpondant.</p>
 </div>
-<h3 id="styliser-le-bouton">Styliser le bouton<a class="headerlink" href="#styliser-le-bouton" title="Permanent link">&para;</a></h3>
-<p>Selon <a href="../outils-developpement/">l'approche</a> que vous avez choisi pour modifier le code source vous devrez suivre les consignes pour le SCSS ou le CSS.</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">CSS</label><div class="tabbed-content">
-<p>Dans <code>/assets/main.css</code>, retrouvez le selecteur <code>lang-box__flag</code> en dessous duquel vous pourrez ajouter les lignes suivantes et remplacer soit <code>lang_ru.svg</code> par le nom de l'image de votre choix soit le chemin complet <code>./icons/lang_ru.svg</code> si votre image ne se trouve pas dans le repertoire <code>/assets/icons/</code>.
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">lang-box__flag--ru</span> <span class="p">{</span>
-    <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s2">&quot;./icons/lang_ru.svg&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">SCSS</label><div class="tabbed-content">
-<p>Si votre image correspond au chemin suivant <code>./icons/lang_ru.svg</code> modifiez simplement la ligne suivante dans le fichier <code>/dist/sass/layout/_entete.scss</code> en lui ajoutant <code>, "ru"</code>
-<div class="highlight"><pre><span></span><code><span class="nv">$langages</span><span class="o">:</span> <span class="s2">&quot;fr&quot;</span><span class="o">,</span> <span class="s2">&quot;en&quot;</span><span class="o">,</span> <span class="s2">&quot;ru&quot;</span><span class="p">;</span>
-</code></pre></div>
-Sinon, vous pouvez intégrer le code suivant au sein de <code>/dist/sass/layout/_entete.scss</code> avec le chemin de votre image.
-<div class="highlight"><pre><span></span><code><span class="nc">.lang-box</span> <span class="p">{</span>
-    <span class="nc">...</span>
-
-    <span class="k">&amp;</span><span class="nt">__flag</span> <span class="p">{</span>
-        <span class="nc">...</span>
-
-<span class="hll">        <span class="k">&amp;</span><span class="nt">--ru</span> <span class="p">{</span>
-</span><span class="hll">            <span class="nt">background-image</span><span class="nd">:</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;lang_ru.svg&#39;</span><span class="o">);</span>
-</span><span class="hll">        <span class="p">}</span>
-</span><span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
-<h2 id="traduire-le-volet-de-description">Traduire le volet de description<a class="headerlink" href="#traduire-le-volet-de-description" title="Permanent link">&para;</a></h2>
-<div class="mermaid">graph TD
-    evtclick{{Clic sur bouton traduction}} --&gt; fx_translate[translateAll]
-    obj_fiche((Fiche)) -.- fx_fill[fill]
-    obj_fiche -.- memory((memory))
-    memory --&gt; fx_fill
-    evtclick --&gt; memory
-    fx_translate --&gt; html[[HTML Elements]]
-
-    style evtclick fill:#4051b5,color:#fff</div>
-
-<p>Dans la fonction <code>fill</code> de l'objet <code>fiche</code> inscrit dans le fichier <code>/dist/scripts/fiche.js</code> se trouve ce <em>switcher</em> qui va vous permettre d'alterner l'affichage des métadonnées au sein du <a href="../../utilisation/elements-interface/#volet-de-description">volet de description</a> selon la langue active.</p>
-<p>Pour chaque <code>case</code> correspondant à une langue vous allez pouvoir activer certaines <a href="../modifier-volet/#injection">fonctions d'affichage</a> du volet.</p>
+<h2 id="traduire-les-donnees">Traduire les données<a class="headerlink" href="#traduire-les-donnees" title="Permanent link">&para;</a></h2>
+<p>La méthode précédante nous a permis de traduire les éléments de l'interface, mais les données dépendent des <a href="../../developpement/bibliotheques/##visjs-v7102">méthodes de VisJs</a>. Dans le fichier <code>/dist/scripts/translate.js</code> vous trouverez un <em>switch</em> (voir code ci-dessous). Il est parcouru à chaque changement de langue et vous permet de modifier les différentes valeurs de vos entités avant qu'elles ne soient ensuite appliquées au <a href="../../utilisation/elements-interface/#volet-de-description">volet de description</a> et aux <a href="../../utilisation/elements-interface/#fiches">fiches</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">switch</span> <span class="p">(</span><span class="nx">langage</span><span class="p">.</span><span class="nx">actual</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="s1">&#39;Fr&#39;</span><span class="o">:</span>
-        <span class="c1">// fonctinos pour le français</span>
+        <span class="nx">network</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">nodes</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span>
+            <span class="nx">network</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">nodes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">entite</span> <span class="p">=&gt;</span> <span class="p">({</span>
+                    <span class="nx">id</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+                    <span class="nx">title</span><span class="o">:</span> <span class="p">...</span> <span class="c1">// traduction</span>
+                <span class="p">})</span>
+<span class="hll">            <span class="p">)</span>
+</span>        <span class="p">);</span>
         <span class="k">break</span><span class="p">;</span>
     <span class="k">case</span> <span class="s1">&#39;En&#39;</span><span class="o">:</span>
         <span class="c1">// fonctions pour l&#39;anglais</span>
         <span class="k">break</span><span class="p">;</span>
-<span class="hll">    <span class="k">case</span> <span class="s1">&#39;Ru&#39;</span><span class="o">:</span>
-</span>        <span class="c1">// fonctions pour le russe</span>
+    <span class="k">case</span> <span class="s1">&#39;Ru&#39;</span><span class="o">:</span>
+        <span class="c1">// fonctions pour le russe</span>
         <span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Vous pouvez inscrire dans le fichier <code>entite.json</code> des métadonnées destinées à une langue en particulier comme pour l'exemple ci-dessous.</p>
-<div class="highlight"><pre><span></span><code>    <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Suzanne Briet&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="nt">&quot;relation&quot;</span><span class="p">:</span> <span class="s2">&quot;contemporain&quot;</span><span class="p">,</span>
-<span class="hll">            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;en français&quot;</span><span class="p">,</span>
-</span><span class="hll">            <span class="nt">&quot;description_en&quot;</span><span class="p">:</span> <span class="s2">&quot;en anglais&quot;</span><span class="p">,</span>
-</span>        <span class="p">}</span>
-    <span class="p">]</span>
+<h3 id="ajouter-une-langue_1">Ajouter une langue<a class="headerlink" href="#ajouter-une-langue_1" title="Permanent link">&para;</a></h3>
+<p>Vous pouvez prévoir une version de vos métadonnées dédiée à cette langue dans vos fichiers <code>entite.json</code> et <code>lien.json</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Paul Otlet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="err">...</span>
+        <span class="nt">&quot;domaine&quot;</span><span class="p">:</span> <span class="s2">&quot;Bibliographie&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;domaine_en&quot;</span><span class="p">:</span> <span class="s2">&quot;Bibliography&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Paul Otlet est la tête pensante du Mundaneum…&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description_en&quot;</span><span class="p">:</span> <span class="s2">&quot;Paul Otlet is the mind behind the Mundaneum…&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
 </code></pre></div>
 
-<h3 id="langue-par-defaut">Langue par défaut<a class="headerlink" href="#langue-par-defaut" title="Permanent link">&para;</a></h3>
-<p>Pour modifier la langue par défaut du volet, vous devez changer la ligne suivante dans l'objet <code>langage</code> qui se trouve dans le fichier <code>/dist/scripts/translate.js</code>. Dans l'exemple ci-dessous, la langue par défaut est le Russe.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">langage</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">flags</span><span class="o">:</span> <span class="p">[</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#lang-ru&#39;</span><span class="p">),</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#lang-en&#39;</span><span class="p">)],</span>
-<span class="hll">    <span class="nx">actual</span><span class="o">:</span> <span class="s1">&#39;Ru&#39;</span><span class="p">,</span>
-</span>    <span class="nx">translateAll</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
-<span class="p">}</span>
+<p>Lors de l'<a href="../../developpement/inscrire-donnees/#injection-des-donnees">injection des données</a> dans le site, nous vous suggerons d'appliquer ce modèle (voir code ci-dessous). Le logiciel se chargera de traduire.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">entiteObj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1">// entite metas</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+    <span class="nx">label</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">label</span><span class="p">,</span>
+    <span class="p">...</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">description</span> <span class="c1">// description dans votre langue par défaut</span>
+    <span class="nx">description_fr</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">description</span> <span class="c1">// si le français est votre langue par défaut</span>
+    <span class="nx">description_en</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">description_en</span> <span class="c1">// pour prévoir un switch vers l&#39;anglais</span>
+<span class="p">};</span>
 </code></pre></div>
                 
                   

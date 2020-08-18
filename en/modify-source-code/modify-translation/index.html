@@ -579,32 +579,19 @@
     Add a language
   </a>
   
-    <nav class="md-nav" aria-label="Add a language">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#styliser-le-bouton" class="md-nav__link">
-    Styliser le bouton
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#translate-description-panel" class="md-nav__link">
-    Translate description panel
+  <a href="#translate-the-data" class="md-nav__link">
+    Translate the data
   </a>
   
-    <nav class="md-nav" aria-label="Translate description panel">
+    <nav class="md-nav" aria-label="Translate the data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#default-language" class="md-nav__link">
-    Default language
+  <a href="#add-a-language_1" class="md-nav__link">
+    Add a language
   </a>
   
 </li>
@@ -678,32 +665,19 @@
     Add a language
   </a>
   
-    <nav class="md-nav" aria-label="Add a language">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#styliser-le-bouton" class="md-nav__link">
-    Styliser le bouton
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#translate-description-panel" class="md-nav__link">
-    Translate description panel
+  <a href="#translate-the-data" class="md-nav__link">
+    Translate the data
   </a>
   
-    <nav class="md-nav" aria-label="Translate description panel">
+    <nav class="md-nav" aria-label="Translate the data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#default-language" class="md-nav__link">
-    Default language
+  <a href="#add-a-language_1" class="md-nav__link">
+    Add a language
   </a>
   
 </li>
@@ -748,78 +722,52 @@
 <p class="admonition-title">Success</p>
 <p>Therefore, any tag with the attribute <code>data-lang-ru="Lorem ipsum"</code> will have its text changed to "Lorem ipsum" when the corresponding button is clicked.</p>
 </div>
-<h3 id="styliser-le-bouton">Styliser le bouton<a class="headerlink" href="#styliser-le-bouton" title="Permanent link">&para;</a></h3>
-<p>Depending on the <a href="../dev-tools/">approach</a> you have chosen to modify the source code you will have to follow the guidelines for SCSS or CSS.</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">CSS</label><div class="tabbed-content">
-<p>In <code>/assets/main.css</code>, find the <code>lang-box__flag</code> selector below which you can add the following lines and replace either <code>lang_ru.svg</code> with the name of the image of your choice or the full path <code>./icons/lang_ru.svg</code> if your image is not in the <code>/assets/icons/</code> directory.
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">lang-box__flag--ru</span> <span class="p">{</span>
-    <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s2">&quot;./icons/lang_ru.svg&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">SCSS</label><div class="tabbed-content">
-<p>If your image matches the following path <code>./icons/lang_ru.svg</code> simply modify the following line in the <code>/dist/sass/layout/_entete.scss</code> file by adding <code>, "ru"</code>.
-<div class="highlight"><pre><span></span><code><span class="nv">$langages</span><span class="o">:</span> <span class="s2">&quot;fr&quot;</span><span class="o">,</span> <span class="s2">&quot;en&quot;</span><span class="o">,</span> <span class="s2">&quot;ru&quot;</span><span class="p">;</span>
-</code></pre></div>
-Alternatively, you can embed the following code within <code>/dist/sass/layout/_entete.scss</code> with the path to your image.
-<div class="highlight"><pre><span></span><code><span class="nc">.lang-box</span> <span class="p">{</span>
-    <span class="nc">...</span>
-
-    <span class="k">&amp;</span><span class="nt">__flag</span> <span class="p">{</span>
-        <span class="nc">...</span>
-
-<span class="hll">        <span class="k">&amp;</span><span class="nt">--ru</span> <span class="p">{</span>
-</span><span class="hll">            <span class="nt">background-image</span><span class="nd">:</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;lang_ru.svg&#39;</span><span class="o">);</span>
-</span><span class="hll">        <span class="p">}</span>
-</span><span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
-<h2 id="translate-description-panel">Translate description panel<a class="headerlink" href="#translate-description-panel" title="Permanent link">&para;</a></h2>
-<div class="mermaid">graph TD
-    evtclick{{Clic sur bouton traduction}} --&gt; fx_translate[translateAll]
-    obj_fiche((Fiche)) -.- fx_fill[fill]
-    obj_fiche -.- memory((memory))
-    memory --&gt; fx_fill
-    evtclick --&gt; memory
-    fx_translate --&gt; html[[HTML Elements]]
-
-    style evtclick fill:#4051b5,color:#fff</div>
-
-<p>In the <code>fill' function of the</code>file' object in the `/dist/scripts/fiche.js' file is this <em>switcher</em> which will allow you to toggle the display of metadata in the <a href="../../usage/interface-elements/#description-panel">description panel</a> according to the active language.</p>
-<p>For each `case' corresponding to a language you will be able to activate certain <a href="../modify-description-panel/#injection">display functions</a> in the pane.</p>
+<h2 id="translate-the-data">Translate the data<a class="headerlink" href="#translate-the-data" title="Permanent link">&para;</a></h2>
+<p>The previous method allowed us to translate the interface elements, but the data depends on <a href="../../development/libraries/##visjs-v7102">methods of VisJs</a>. In the <code>/dist/scripts/translate.js</code> file you will find a *switch (see code below). It is scanned at each language change and allows you to modify the different values of your entities before they are applied to the <a href="../../usage/interface-elements/#Description-panel">description pane</a> and the <a href="../../usage/interface-elements/#records">records</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">switch</span> <span class="p">(</span><span class="nx">langage</span><span class="p">.</span><span class="nx">actual</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="s1">&#39;Fr&#39;</span><span class="o">:</span>
-        <span class="c1">// fonctinos pour le français</span>
+        <span class="nx">network</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">nodes</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span>
+            <span class="nx">network</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">nodes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">entite</span> <span class="p">=&gt;</span> <span class="p">({</span>
+                    <span class="nx">id</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+                    <span class="nx">title</span><span class="o">:</span> <span class="p">...</span> <span class="c1">// traduction</span>
+                <span class="p">})</span>
+<span class="hll">            <span class="p">)</span>
+</span>        <span class="p">);</span>
         <span class="k">break</span><span class="p">;</span>
     <span class="k">case</span> <span class="s1">&#39;En&#39;</span><span class="o">:</span>
         <span class="c1">// fonctions pour l&#39;anglais</span>
         <span class="k">break</span><span class="p">;</span>
-<span class="hll">    <span class="k">case</span> <span class="s1">&#39;Ru&#39;</span><span class="o">:</span>
-</span>        <span class="c1">// fonctions pour le russe</span>
+    <span class="k">case</span> <span class="s1">&#39;Ru&#39;</span><span class="o">:</span>
+        <span class="c1">// fonctions pour le russe</span>
         <span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>You can write metadata for a particular language in the <code>entite.json</code> file, as in the example below.</p>
-<div class="highlight"><pre><span></span><code>    <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Suzanne Briet&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="nt">&quot;relation&quot;</span><span class="p">:</span> <span class="s2">&quot;contemporain&quot;</span><span class="p">,</span>
-<span class="hll">            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;en français&quot;</span><span class="p">,</span>
-</span><span class="hll">            <span class="nt">&quot;description_en&quot;</span><span class="p">:</span> <span class="s2">&quot;en anglais&quot;</span><span class="p">,</span>
-</span>        <span class="p">}</span>
-    <span class="p">]</span>
+<h3 id="add-a-language_1">Add a language<a class="headerlink" href="#add-a-language_1" title="Permanent link">&para;</a></h3>
+<p>You can provide a version of your metadata dedicated to that language in your <code>entite.json</code> and <code>lien.json</code> files.</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Paul Otlet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="err">...</span>
+        <span class="nt">&quot;domaine&quot;</span><span class="p">:</span> <span class="s2">&quot;Bibliographie&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;domaine_en&quot;</span><span class="p">:</span> <span class="s2">&quot;Bibliography&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Paul Otlet est la tête pensante du Mundaneum…&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description_en&quot;</span><span class="p">:</span> <span class="s2">&quot;Paul Otlet is the mind behind the Mundaneum…&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
 </code></pre></div>
 
-<h3 id="default-language">Default language<a class="headerlink" href="#default-language" title="Permanent link">&para;</a></h3>
-<p>To change the default language of the pane, you need to change the following line in the <code>language</code> object in the <code>/dist/scripts/translate.js</code> file. In the example below, the default language is Russian.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">langage</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">flags</span><span class="o">:</span> <span class="p">[</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#lang-ru&#39;</span><span class="p">),</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#lang-en&#39;</span><span class="p">)],</span>
-<span class="hll">    <span class="nx">actual</span><span class="o">:</span> <span class="s1">&#39;Ru&#39;</span><span class="p">,</span>
-</span>    <span class="nx">translateAll</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
-<span class="p">}</span>
+<p>When <a href="../../development/register-data/#data-injection">data injection</a> in the site, we suggest you apply this template (see code below). The software will take care of the translation.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">entiteObj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1">// entite metas</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+    <span class="nx">label</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">label</span><span class="p">,</span>
+    <span class="p">...</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">description</span> <span class="c1">// description dans votre langue par défaut</span>
+    <span class="nx">description_fr</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">description</span> <span class="c1">// si le français est votre langue par défaut</span>
+    <span class="nx">description_en</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">description_en</span> <span class="c1">// pour prévoir un switch vers l&#39;anglais</span>
+<span class="p">};</span>
 </code></pre></div>
                 
                   
