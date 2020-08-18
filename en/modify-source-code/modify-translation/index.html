@@ -582,11 +582,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#translate-the-data" class="md-nav__link">
-    Translate the data
+  <a href="#translate-data" class="md-nav__link">
+    Translate data
   </a>
   
-    <nav class="md-nav" aria-label="Translate the data">
+    <nav class="md-nav" aria-label="Translate data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -668,11 +668,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#translate-the-data" class="md-nav__link">
-    Translate the data
+  <a href="#translate-data" class="md-nav__link">
+    Translate data
   </a>
   
-    <nav class="md-nav" aria-label="Translate the data">
+    <nav class="md-nav" aria-label="Translate data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -722,7 +722,7 @@
 <p class="admonition-title">Success</p>
 <p>Therefore, any tag with the attribute <code>data-lang-ru="Lorem ipsum"</code> will have its text changed to "Lorem ipsum" when the corresponding button is clicked.</p>
 </div>
-<h2 id="translate-the-data">Translate the data<a class="headerlink" href="#translate-the-data" title="Permanent link">&para;</a></h2>
+<h2 id="translate-data">Translate data<a class="headerlink" href="#translate-data" title="Permanent link">&para;</a></h2>
 <p>The previous method allowed us to translate the interface elements, but the data depends on <a href="../../development/libraries/##visjs-v7102">methods of VisJs</a>. In the <code>/dist/scripts/translate.js</code> file you will find a *switch (see code below). It is scanned at each language change and allows you to modify the different values of your entities before they are applied to the <a href="../../usage/interface-elements/#Description-panel">description pane</a> and the <a href="../../usage/interface-elements/#records">records</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">switch</span> <span class="p">(</span><span class="nx">langage</span><span class="p">.</span><span class="nx">actual</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="s1">&#39;Fr&#39;</span><span class="o">:</span>
@@ -731,8 +731,8 @@
                     <span class="nx">id</span><span class="o">:</span> <span class="nx">entite</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
                     <span class="nx">title</span><span class="o">:</span> <span class="p">...</span> <span class="c1">// traduction</span>
                 <span class="p">})</span>
-<span class="hll">            <span class="p">)</span>
-</span>        <span class="p">);</span>
+            <span class="p">)</span>
+        <span class="p">);</span>
         <span class="k">break</span><span class="p">;</span>
     <span class="k">case</span> <span class="s1">&#39;En&#39;</span><span class="o">:</span>
         <span class="c1">// fonctions pour l&#39;anglais</span>
